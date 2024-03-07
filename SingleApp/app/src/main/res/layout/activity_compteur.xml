@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+<!-- on ne doit pas écrire en "dur" cad écrire les données
+dans le fichier activity layout mais dans le fichier
+ressources -->
+<TextView
+    android:id="@+id/titrePage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="sans-serif"
+    android:gravity="center"
+    android:text="@string/titrePage1"
+    android:textSize="60sp"
+    app:layout_constraintBottom_toTopOf="@id/btnReset"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<Button
+    android:id="@+id/btnPlus"
+    android:onClick="onClickPlus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/btnStrPlus"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/btnReset"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/titrePage" />
+
+<Button
+    android:id="@+id/btnReset"
+    android:onClick="onClickReset"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/btnStrReset"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/btnMoins"
+    app:layout_constraintStart_toEndOf="@+id/btnPlus"
+    app:layout_constraintTop_toBottomOf="@+id/titrePage" />
+
+<Button
+    android:id="@+id/btnMoins"
+    android:onClick="onClickMoins"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/btnStrMoins"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/btnReset"
+    app:layout_constraintTop_toBottomOf="@+id/titrePage" />
+
+<EditText
+    android:id="@+id/compteurGR"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    android:background="@color/greyMedium"
+    android:ems="10"
+    android:gravity="center"
+    android:inputType="numberSigned"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/btnReset" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

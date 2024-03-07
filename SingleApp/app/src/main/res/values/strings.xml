@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SecondApplication</string>
+    <!-- titre du main -->
+    <string name="titrePage1">première application <br>android studio</br></string>
+    <!-- nom des boutons -->
+    <string name="btnStrPlus">Plus</string>
+    <string name="btnStrReset">Reset</string>
+    <string name="btnStrMoins">moins</string>
+    <!-- compteur principal page 1-->
+
+</resources>
